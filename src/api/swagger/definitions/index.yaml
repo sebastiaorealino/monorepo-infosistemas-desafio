@@ -1,0 +1,12 @@
+ErrorResponse:
+  $ref: ./general/error-response.yaml
+SuccessResponse:
+  $ref: ./general/success-response.yaml
+UserResponse:
+  $ref: ./user/user-response.yaml
+User:
+  $ref: ./user/user.yaml
+AuthUser:
+  $ref: ./user/auth-user.yaml
+Car:
+  $ref: ./car/car.yaml

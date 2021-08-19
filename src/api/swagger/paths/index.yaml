@@ -1,0 +1,11 @@
+
+/user/authenticate:
+  $ref: /user/user-authenticate.yaml
+/user:
+  $ref: /user/user.yaml
+/user/{id}:
+  $ref: /user/user-id.yaml
+/car:
+  $ref: /car/car.yaml
+/swagger:
+  x-swagger-pipe: swagger_raw

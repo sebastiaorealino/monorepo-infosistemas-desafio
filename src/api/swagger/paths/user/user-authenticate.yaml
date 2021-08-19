@@ -1,0 +1,22 @@
+x-swagger-router-controller: user
+post:
+  tags:
+    - User
+  description: Authenticate user
+  operationId: authenticateUser
+  parameters:
+    - in: body
+      name: body
+      description: Person object added to the databse
+      required: true
+      schema:
+        $ref: '#/definitions/AuthUser'
+  responses:
+    '201':
+      description: Success
+      schema:
+        $ref: '#/definitions/UserResponse'
+    default:
+      description: Error
+      schema:
+        $ref: '#/definitions/ErrorResponse'

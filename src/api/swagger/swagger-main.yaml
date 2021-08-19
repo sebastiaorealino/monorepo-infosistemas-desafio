@@ -1,0 +1,23 @@
+swagger: '2.0'
+info:
+  version: 0.0.1
+  title: InfoCar API
+host: '18.231.37.199:80'
+basePath: /v1
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+  - application/x-www-form-urlencoded
+produces:
+  - application/json
+securityDefinitions:
+  apiKey:
+    type: apiKey
+    in: query
+    name: apiKey
+paths:
+  $ref: ./paths/index.yaml
+definitions:
+  $ref: ./definitions/index.yaml

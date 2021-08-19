@@ -1,0 +1,25 @@
+x-swagger-router-controller: user
+get:
+  tags:
+    - User
+  security:
+    - apiKey: []
+  x-security-scopes:
+    - ADMIN
+  description: Gets a specific user
+  operationId: getUserById
+  parameters:
+    - name: id
+      in: path
+      description: id of user
+      required: true
+      type: string
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/UserResponse'
+    default:
+      description: Error
+      schema:
+        $ref: '#/definitions/ErrorResponse'

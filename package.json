@@ -1,0 +1,70 @@
+{
+  "name": "infocars-api",
+  "version": "1.0.0",
+  "description": "API for InfoCar",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastiaorealino/monorepo-infosistemas-desafio.git"
+  },
+  "author": "Sebastiao Realino",
+  "license": "ISC",
+  "homepage": "https://github.com/sebastiaorealino/monorepo-infosistemas-desafio.git#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.12.3",
+    "fast-json-patch": "^2.0.5",
+    "http-status": "^1.0.1",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-paginate-v2": "^1.3.18",
+    "multi-file-swagger": "^2.2.0",
+    "passport": "^0.4.0",
+    "swagger-express-mw": "^0.7.0",
+    "swagger-tools": "^0.10.3",
+    "winston": "^3.0.0",
+    "mocha": "^3.4.2",
+    "should": "^7.1.0",
+    "supertest": "^1.0.0",
+    "mongoose": "^5.13.2",
+    "chai": "^3.2.0",
+    "chai-as-promised": "^6.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-watch": "^2.0.6",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "cross-env": "^5.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "scripts": {
+    "start": "npm run swagger:compile && cross-env NODE_ENV=dev babel-watch src",
+    "prod": "npm run swagger:compile && npm run build && node dist/index.js",
+    "swagger:compile": "cd src/api/swagger && multi-file-swagger -o yaml swagger-main.yaml > swagger.yaml && cd ../../..",
+    "swagger:edditor": "export swagger_swagger_fileName='src/api/swagger/swagger.yaml' && swagger project edit",
+    "swagger:edditor-win": "npm run swagger:compile && set swagger_swagger_fileName=src/api/swagger/swagger.yaml&& swagger project edit",
+    "build": "npm run swagger:compile && babel src -d dist --copy-files",
+    "watch": "babel -w src/index.js -d dist -s",
+    "lint": "eslint src/api/ src/config/ src/models/ src/app.js src/index.js",
+    "lint:fix": "eslint --fix src/api/ src/config/ src/models/ src/app.js src/index.js",
+    "test": "npm run swagger:compile && cross-env NODE_ENV=test mocha src/test/**/*.js --compilers js:babel-core/register -R spec --timeout 5000"
+  }
+}

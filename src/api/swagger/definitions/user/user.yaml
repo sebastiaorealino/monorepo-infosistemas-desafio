@@ -1,0 +1,15 @@
+title: A user
+type: object
+required:
+  - email
+  - password
+properties:
+  name:
+    type: string
+  lastName:
+    type: string
+  email:
+    type: string
+    format: email
+  password:
+    type: string
