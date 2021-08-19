@@ -8,10 +8,10 @@ export default {
   // MongoDB connection options
   mongo: {
     // Mongo Server
-    uri: 'mongodb+srv://apiaccess:yCJkpAoY8Lh3wAQu@brotherbookcluster.dqsgo.mongodb.net/bb_qa?retryWrites=true&w=majority',
+    uri: '', // Add mongo server for qa environment
   },
   // secretKey for JWT
-  secretKey: 'BR00Th3RB00K_5Zu5Ak_QA',
+  secretKey: 'INF051573M45_5V4XZ76_QA',
   paginateOptions: {
     limit: 15,
   },

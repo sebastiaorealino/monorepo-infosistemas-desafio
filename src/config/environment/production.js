@@ -7,10 +7,10 @@ export default {
   // MongoDB connection options
   mongo: {
     // Mongo Server
-    uri: 'mongodb+srv://apiaccess:yCJkpAoY8Lh3wAQu@brotherbookcluster.dqsgo.mongodb.net/bb_prod?retryWrites=true&w=majority',
+    uri: '', //Add prod mongo server
   },
   // secretKey for JWT
-  secretKey: 'BR00Th3RB00K_5Zu5Ak_PROD',
+  secretKey: 'INF051573M45_5Zu5Ak_PROD',
   paginateOptions: {
     limit: 15,
   },

@@ -1,0 +1,48 @@
+x-swagger-router-controller: car
+post:
+  tags:
+    - Car
+  security:
+    - apiKey: []
+  x-security-scopes:
+    - ADMIN
+    - USER
+  description: Create a new Car
+  operationId: createCar
+  parameters:
+    - in: body
+      name: body
+      description: Car object
+      required: true
+      schema:
+        $ref: '#/definitions/Car'
+  responses:
+    '201':
+      description: Success
+      schema:
+        $ref: '#/definitions/SuccessResponse'
+    default:
+      description: Error
+      schema:
+        $ref: '#/definitions/ErrorResponse'
+get:
+  tags:
+    - Car
+  security:
+    - apiKey: []
+  x-security-scopes:
+    - ADMIN
+    - USER
+  description: Returns a Car list
+  operationId: listCars
+  parameters:
+    - name: page
+      in: query
+      description: current page position
+      type: number
+  responses:
+    '200':
+      description: Success
+      schema:
+        $ref: '#/definitions/SuccessResponse'
+

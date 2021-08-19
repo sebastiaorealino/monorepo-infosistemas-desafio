@@ -1,0 +1,23 @@
+title: A Car
+type: object
+required:
+  - placa
+  - chassi
+  - renavam
+  - modelo
+  - marca
+  - ano
+properties:
+  placa:
+    type: string
+  chassi:
+    type: string
+  renavam:
+    type: string
+  modelo:
+    type: string
+  marca:
+    type: string
+  ano:
+    type: number
+
