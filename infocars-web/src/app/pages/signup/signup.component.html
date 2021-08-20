@@ -1,0 +1,50 @@
+<div id="__layout">
+    <div class="d-flex align-items-center min-vh-100 min-vw-100 bg-light p-0">
+      <div class="container">
+        <div class="container-fluid mx-auto p-0 mw-100" style="width: 430px;">
+          <img src="assets/infocars-logo.png" alt="Workflow" class="d-flex px-4 mx-auto" style="width: 400px;">
+
+          <h2 class="mt-4 text-center font-weight-bold">
+            Criar nova conta
+          </h2>
+          <p class="mt-2 text-center text-muted">
+            Ou
+            <a href="/login" class="text-decoration-none font-weight-bolder">
+              entrar na sua conta existente
+            </a>
+          </p>
+        </div>
+        <div class="container-fluid mt-4 mx-auto p-0 mw-100" style="width: 430px;">
+          <form class="bg-white p-4 shadow-sm rounded-lg" (ngSubmit)="createUser()">
+            <div class="form-group mt-4 mb-0">
+              <label class="mb-1">
+                Nome
+              </label>
+              <input [(ngModel)]="credential.name" title="email-login" type="test" name="text" required="required"
+                class="form-control form-control-sm d-block w-100 py-2 px-3 rounded-lg" style="height: 40px;">
+            </div>
+            <div class="form-group mt-4 mb-0">
+              <label class="mb-1">
+                E-mail
+              </label>
+              <input [(ngModel)]="credential.email" title="email-login" type="email" name="email" required="required"
+                class="form-control form-control-sm d-block w-100 py-2 px-3 rounded-lg" style="height: 40px;">
+            </div>
+            <div class="form-group mt-4 mb-0">
+              <label class="mb-1">
+                Senha
+              </label>
+              <input [(ngModel)]="credential.password" title="password-login" type="password" name="password" required="required"
+                class="form-control form-control-sm d-block w-100 py-2 px-3 rounded-lg" style="height: 40px;">
+            </div>
+            <div class="mt-4">
+              <button type="submit" class="py-2 px-4 border btn btn-block btn-primary shadow-sm rounded-lg">
+                Criar conta
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-primary flex-md-nowrap p-2 shadow-sm">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu"
+    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="sidebarMenu">
+    <a class="navbar-brand" href="">InfoCars</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['cars']" routerLinkActive="active">Lista de carros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="" (click)="doLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+

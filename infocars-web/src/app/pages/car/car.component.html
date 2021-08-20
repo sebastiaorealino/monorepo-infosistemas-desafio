@@ -1,0 +1,16 @@
+<div class="row">
+    <div *ngIf="cars.length === 0" class="alert alert-light text-center mx-auto mb-0" role="alert">
+        Lista de Carros vazia.
+    </div>
+    <div class="card mr-2" style="width: 18rem;" *ngFor="let car of cars">
+        <div class="card-body mt-2">
+            <h5 class="card-title">Informações do carro:</h5>
+            <p>Modelo: {{car.modelo}}</p>
+            <p>Placa: {{car.placa}}</p>
+            <p>Chassi: {{car.chassi}}</p>
+            <p>Renavam: {{car.renavam}}</p>
+            <p>Marca: {{car.marca}}</p>
+            <p>Ano: {{car.ano}}</p>
+        </div>
+    </div>
+</div>

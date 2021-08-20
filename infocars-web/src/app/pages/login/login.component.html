@@ -1,0 +1,45 @@
+<div id="__layout">
+    <div class="d-flex align-items-center min-vh-100 min-vw-100 bg-light p-0">
+      <div class="container">
+        <div class="container-fluid mx-auto p-0 mw-100" style="width: 430px;">
+          <img src="assets/infocars-logo.png" alt="Workflow" class="d-flex px-4 mx-auto" style="width: 400px;">
+          <h2 class="mt-4 text-center font-weight-bold">
+            Entrar na sua conta
+          </h2>
+          <p class="mt-2 text-center text-muted">
+            Ou
+            <a href="/signup" class="text-decoration-none font-weight-bolder">
+              fazer cadastro
+            </a>
+          </p>
+        </div>
+        <div class="container-fluid mt-4 mx-auto p-0 mw-100 bg-white p-4 shadow-sm rounded-lg" style="width: 430px;">
+          <form #loginForm="ngForm" (ngSubmit)="authenticate()">
+            <div class="form-group mb-0">
+              <label class="mb-1">
+                E-mail
+              </label>
+              <input title="email-login" type="email" #email="ngModel" [(ngModel)]="login.email" name="email"
+                required="required" class="form-control form-control-sm d-block w-100 py-2 px-3 rounded-lg"
+                style="height: 40px;">
+            </div>
+            <div class="form-group mt-4 mb-0">
+              <label class="mb-1">
+                Senha
+              </label>
+              <input title="password-login" type="password" #password="ngModel" [(ngModel)]="login.password"
+                name="password" required="required"
+                class="form-control form-control-sm d-block w-100 py-2 px-3 rounded-lg" style="height: 40px;">
+            </div>
+            <div class="mt-4">
+              <button type="submit" class="" [disabled]="!loginForm.valid"
+                class="py-2 px-4 border btn btn-block btn-primary shadow-sm rounded-lg">
+                Entrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
